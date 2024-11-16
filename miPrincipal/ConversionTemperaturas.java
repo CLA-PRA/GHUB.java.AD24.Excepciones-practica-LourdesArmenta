@@ -8,7 +8,7 @@ public class ConversionTemperaturas{
     public static void conversion(Scanner scanner){
        
 
-        try {
+        //coloque un bloque try con 3 catch
             System.out.print("Ingresa la temperatura: ");
             double temperatura = Double.parseDouble(scanner.nextLine());
 
@@ -30,22 +30,48 @@ public class ConversionTemperaturas{
                     throw new IllegalArgumentException("Opción no válida");
             }
 
-        } catch (NumberFormatException e) {
-            System.out.println("Entrada no válida. Por favor, ingrese un número.");
-        } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
-        }catch(Exception e){
-            System.out.println(e.getMessage());
+        } 
+        /*
+        captura una excepción de tipo NumberFormatException.
+         Esta excepción se lanza cuando se intenta convertir 
+         una cadena que no tiene un formato numérico válido 
+         a un número. Cuando ocurre esta excepción, 
+         el programa imprime el mensaje 
+         "Entrada no válida. Por favor, ingrese un número." 
+         en la consola para informar al usuario que la entrada
+          proporcionada no es un número válido.
+        */
         
-        }
+        } // coloque aquó otro catch
+        /*
+        captura una excepción de tipo IllegalArgumentException.
+         Esta excepción se lanza cuando se pasa un argumento 
+         ilegal o inapropiado a un método.
+          Cuando ocurre esta excepción, el programa imprime 
+          el mensaje de la excepción en la consola utilizando 
+          System.out.println(e.getMessage()).
+        */
+        
+        }//coloque un último catch 
+        /*
+        captura cualquier excepción que no haya sido capturada 
+        por los bloques catch anteriores.
+         Cuando ocurre una excepción, 
+         el programa imprime el mensaje de la excepción 
+         en la consola utilizando System.out.println(e.getMessage())
+        */
+
+        
+        
         
     }
 
     public static double celsiusAFahrenheit(double celsius) {
-        return (celsius * 9/5) + 32;
+       //coloque el código
     }
 
-    public static double fahrenheitACelsius(double fahrenheit) {
-        return (fahrenheit - 32) * 5/9;
-    }
+    //cree un método público estático que regrese un double
+    //deberá recibir un valor fahrenheit y convertirlo
+    // a Celsius
+    
 }

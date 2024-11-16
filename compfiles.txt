@@ -1,6 +1,5 @@
 ./miPrincipal/ValidacionEdad.java
 ./miPrincipal/ConversionTemperaturas.java
 ./miPrincipal/OperacionesMatrices.java
-./miPrincipal/EdadInvalidaException.java
 ./miPrincipal/Principal.java
 ./miTest/AppTest.java

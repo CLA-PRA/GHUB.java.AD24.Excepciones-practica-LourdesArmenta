@@ -3,32 +3,31 @@ package miPrincipal;
 import java.util.Scanner;
 
 public class ValidacionEdad{
-    public static void validar(Scanner scanner) throws EdadInvalidaException{
+
+    /*
+    
+    Solicita al usuario que ingrese su edad.
+    Intenta convertir la entrada del usuario a un número entero.
+    Llama al método validarEdad para verificar si la edad ingresada es válida.
+    Si la conversión a entero falla (por ejemplo, si el usuario ingresa texto en lugar de un número), 
+    se lanza una excepción NumberFormatException y se captura, lanzando una nueva excepción EdadInvalidaException con un mensaje de error específico.
+    Si la validación de la edad falla y lanza una EdadInvalidaException, esta se captura y se vuelve a lanzar.
+    Si ocurre cualquier otra excepción, se captura y se lanza una nueva EdadInvalidaException con un mensaje de error que incluye el mensaje de la excepción original.
+    */
+
         
+    
+    /*
+     * Este método debe ser publico y estático y no regresa nada
 
-        try {
-            System.out.print("Ingresa tu edad: ");
-            int edad = Integer.parseInt(scanner.nextLine());
+    validarEdad en ValidacionEdad.
+    verifica si la edad ingresada es válida.
 
-            validarEdad(edad);
+    Si la edad es menor que 0 o mayor que 150, lanza una excepción EdadInvalidaException con un mensaje de error específico: "Entrada no válida. Por favor, ingrese un número mayor que 0 y menor que 150".
+    Si la edad está dentro del rango válido (0 a 150), no hace nada y permite que el programa continúe.
 
-            System.out.println("La edad ingresada es válida: " + edad + " años.");
-
-        } catch (NumberFormatException e) {
-            throw new EdadInvalidaException("Error: Entrada no válida. Por favor, ingresa un número.");
-        } catch (EdadInvalidaException e) {
-            throw e;
-        } catch (Exception e) {
-            throw new EdadInvalidaException("Ha ocurrido un error inesperado: " + e.getMessage());
-        }
-        
-    }
-
-    public static void validarEdad(int edad) throws EdadInvalidaException {
-        if (edad < 0 || edad > 150) {
-            throw new EdadInvalidaException("Entrada no válida. Por favor, ingrese un número mayor que 0 y menor que 50");
-        }
-    }
+     */
+    
 
     public static boolean esMayorDeEdad(int edad){
         

@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class OperacionesMatrices {
 
     public static void menu(Scanner scanner) {
-        //Scanner scanner = new Scanner(System.in);
+        
         int opcion;
 
         do {
@@ -44,44 +44,18 @@ public class OperacionesMatrices {
         int[][] matriz2 = new int[filas][columnas];
 
         System.out.println("Ingrese los elementos de la primera matriz:");
-        for (int i = 0; i < filas; i++) {
-            for (int j = 0; j < columnas; j++) {
-                matriz1[i][j] = scanner.nextInt();
-            }
-        }
+        //coloque el codigo para ingresar los elementos de la matriz1
 
         System.out.println("Ingrese los elementos de la segunda matriz:");
-        for (int i = 0; i < filas; i++) {
-            for (int j = 0; j < columnas; j++) {
-                matriz2[i][j] = scanner.nextInt();
-            }
-        }
+       //coloque el codigo para ingresar los elementos de la matriz2
 
-        sumarMatrices(matriz1,matriz2);
-
-        
+       //invoque al método sumarMatrices
     }
 
-    public static int [][] sumarMatrices(int matriz1[][], int matriz2[][])
+    public static //complete el método para sumarMatrices
     {
-        int filas = matriz1.length;
-        int columnas =matriz1[0].length;
-
-        int[][] suma = new int[filas][columnas];
-        for (int i = 0; i < filas; i++) {
-            for (int j = 0; j < columnas; j++) {
-                suma[i][j] = matriz1[i][j] + matriz2[i][j];
-            }
-        }
-
-        System.out.println("Resultado de la suma de matrices:");
-        for (int i = 0; i < filas; i++) {
-            for (int j = 0; j < columnas; j++) {
-                System.out.print(suma[i][j] + " ");
-            }
-            System.out.println();
-        }
-        return suma;
+        
+        return suma;//valor de retoro que deberá ser un arreglo de enteros
 
     }
 
@@ -98,47 +72,19 @@ public class OperacionesMatrices {
         int[][] matriz2 = new int[columnas1Filas2][columnas2];
 
         System.out.println("Ingrese los elementos de la primera matriz:");
-        for (int i = 0; i < filas1; i++) {
-            for (int j = 0; j < columnas1Filas2; j++) {
-                matriz1[i][j] = scanner.nextInt();
-            }
-        }
+        //coloque elcódigo para ingresar los elementos de la primera matriz
 
         System.out.println("Ingrese los elementos de la segunda matriz:");
-        for (int i = 0; i < columnas1Filas2; i++) {
-            for (int j = 0; j < columnas2; j++) {
-                matriz2[i][j] = scanner.nextInt();
-            }
-        }
+        //coloque el código para ingresar los elementos de la segunda matriz
 
         multiplicarMatrices(matriz1,matriz2);
 
        
     }
 
-    public static int [][] multiplicarMatrices(int matriz1[][], int matriz2[][]){
-        
-        int filas1=matriz1.length;
-        int columnas1Filas2 = matriz1[0].length;
-        int columnas2 =matriz2.length;
-
-        int[][] producto = new int[filas1][columnas2];
-        for (int i = 0; i < filas1; i++) {
-            for (int j = 0; j < columnas2; j++) {
-                for (int k = 0; k < columnas1Filas2; k++) {
-                    producto[i][j] += matriz1[i][k] * matriz2[k][j];
-                }
-            }
-        }
-
-        System.out.println("Resultado de la multiplicación de matrices:");
-        for (int i = 0; i < filas1; i++) {
-            for (int j = 0; j < columnas2; j++) {
-                System.out.print(producto[i][j] + " ");
-            }
-            System.out.println();
-        }
-        return producto;
+    //cree un método estático que regrese la multiplicacion de las dos matrices
+    //el método deberá nombrarse multiplicarMatrices y retornará una matriz de enteros
+    
 
     }
 }
