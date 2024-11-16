@@ -6,11 +6,12 @@ import java.util.InputMismatchException;
 public class Principal {
    
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        //Declara objeto Scannr
         int opcion = 0;
 
         do {
-            try {
+            //coloca el menu dentro de un bloque try
+            
                 System.out.println("Menú Principal:");
                 System.out.println("1. Conversión de Temperatura");
                 System.out.println("2. Validación de Edad");
@@ -36,14 +37,16 @@ public class Principal {
                     default:
                         System.out.println("Opción no válida. Intente de nuevo.");
                 }
-            } catch (InputMismatchException e) {
-                System.out.println("Entrada no válida. Por favor, ingrese un número.");
+            } //coloca el codigo correspondiente para validar que se capture un número
+            
+               
                 scanner.next(); // Limpiar la entrada incorrecta
-            } catch (EdadInvalidaException e) {
-               System.out.println(e.getMessage());            
-               e.printStackTrace();
-            } 
-        } while (opcion != 4);
+            }//coloca un codigo correspondiente para atrapar laexcepcion  EdadInvalidaException
+             //coloca el codigo apropiado 
+            
+              
+            
+        } while //coloque lo faltante
 
         scanner.close();
     }
