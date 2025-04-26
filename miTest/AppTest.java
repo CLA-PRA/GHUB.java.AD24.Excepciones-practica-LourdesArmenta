@@ -91,6 +91,7 @@ class AppTest {
         assertArrayEquals(expected, result);
     }
 
+    
     @Test
     void testManejoExcepciones() {
         // Prueba para ConversionTemperaturas
@@ -98,7 +99,9 @@ class AppTest {
             ConversionTemperaturas.celsiusAFahrenheit(Double.parseDouble("abc"));
             fail("Se esperaba una NumberFormatException");
         } catch (NumberFormatException e) {
-            String expectedMessage = "Para la cadena de entrada";
+            System.out.println(e.getMessage());
+            //String expectedMessage = "Para la cadena de entrada";
+            String expectedMessage = "For input string: \"abc\"";
             String actualMessage = e.getMessage();
             assertTrue(actualMessage.contains(expectedMessage));
         }
@@ -108,7 +111,8 @@ class AppTest {
             ValidacionEdad.esMayorDeEdad(Integer.parseInt("abc"));
             fail("Se esperaba una NumberFormatException");
         } catch (NumberFormatException e) {
-            String expectedMessage = "Error: Entrada no válida. Por favor, ingresa un número.";
+            //System.out.println(e.getMessage());
+            String expectedMessage = "For input string: \"abc\"";
             String actualMessage = e.getMessage();
             assertTrue(actualMessage.contains(expectedMessage));
         }
@@ -120,11 +124,12 @@ class AppTest {
             OperacionesMatrices.sumarMatrices(matriz1, matriz2);
             fail("Se esperaba una NumberFormatException");
         } catch (NumberFormatException e) {
-            String expectedMessage = "Para la cadena de entrada";
+            String expectedMessage = "For input string: \"abc\"";;
             String actualMessage = e.getMessage();
             assertTrue(actualMessage.contains(expectedMessage));
         }
     }
+    
 
     @Test
     void testValidacionEdadExcepcion() {
